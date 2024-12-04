@@ -98,22 +98,38 @@ pub trait LiquidityPoolAccount<'info> {
         system_program: &Program<'info, System>,
     ) -> Result<()>;
 
-    fn buy(
-        &mut self,
-        // bonding_configuration_account: &Account<'info, CurveConfiguration>,
-        token_accounts: (
-            &mut Account<'info, Mint>,
-            &mut Account<'info, TokenAccount>,
-            &mut Account<'info, TokenAccount>,
-        ),
-        pool_sol_vault: &mut AccountInfo<'info>,
-        amount: u64,
-        authority: &Signer<'info>,
-        token_program: &Program<'info, Token>,
-        system_program: &Program<'info, System>,
-    ) -> Result<()>;
+    // fn buy(
+    //     &mut self,
+    //     // bonding_configuration_account: &Account<'info, CurveConfiguration>,
+    //     token_accounts: (
+    //         &mut Account<'info, Mint>,
+    //         &mut Account<'info, TokenAccount>,
+    //         &mut Account<'info, TokenAccount>,
+    //     ),
+    //     pool_sol_vault: &mut AccountInfo<'info>,
+    //     amount: u64,
+    //     authority: &Signer<'info>,
+    //     token_program: &Program<'info, Token>,
+    //     system_program: &Program<'info, System>,
+    // ) -> Result<()>;
 
-    fn sell(
+    // fn sell(
+    //     &mut self,
+    //     // bonding_configuration_account: &Account<'info, CurveConfiguration>,
+    //     token_accounts: (
+    //         &mut Account<'info, Mint>,
+    //         &mut Account<'info, TokenAccount>,
+    //         &mut Account<'info, TokenAccount>,
+    //     ),
+    //     pool_sol_vault: &mut AccountInfo<'info>,
+    //     amount: u64,
+    //     bump: u8,
+    //     authority: &Signer<'info>,
+    //     token_program: &Program<'info, Token>,
+    //     system_program: &Program<'info, System>,
+    // ) -> Result<()>;
+
+    fn swap(
         &mut self,
         // bonding_configuration_account: &Account<'info, CurveConfiguration>,
         token_accounts: (
